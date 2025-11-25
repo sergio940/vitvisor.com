@@ -96,7 +96,7 @@
 
 <div class="videos-container" id="videosContainer">
     <!-- 20 vídeos locales -->
-    <div class="video-card" data-src="videos/video1.mp4" data-title="Video 1"><video src="lerica.mp4" controls></video><p>Video 1</p></div>
+    <div class="video-card" data-src="lerica.mp4" data-title="Video 1"><video src="lerica.mp4" controls></video><p>Video 1</p></div>
     <div class="video-card" data-src="videos/video2.mp4" data-title="Video 2"><video src="videos/video2.mp4" controls></video><p>Video 2</p></div>
     <div class="video-card" data-src="videos/video3.mp4" data-title="Video 3"><video src="videos/video3.mp4" controls></video><p>Video 3</p></div>
     <div class="video-card" data-src="videos/video4.mp4" data-title="Video 4"><video src="videos/video4.mp4" controls></video><p>Video 4</p></div>
