@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -96,8 +95,7 @@
 </div>
 
 <div class="videos-container" id="videosContainer">
-    <!-- 20 vídeos locales -->
-    <div class="video-card" data-src="lerica.mp4" data-title="Video 1"><video src="lerica.mp4" controls></video><p>lerica </p></div>
+    <div class="video-card" data-src="lerica.mp4" data-title="Video 1"><video src="lerica.mp4" controls></video><p>lerica 1</p></div>
     <div class="video-card" data-src="videos/video2.mp4" data-title="Video 2"><video src="videos/video2.mp4" controls></video><p>Video 2</p></div>
     <div class="video-card" data-src="videos/video3.mp4" data-title="Video 3"><video src="videos/video3.mp4" controls></video><p>Video 3</p></div>
     <div class="video-card" data-src="videos/video4.mp4" data-title="Video 4"><video src="videos/video4.mp4" controls></video><p>Video 4</p></div>
@@ -119,7 +117,6 @@
     <div class="video-card" data-src="videos/video20.mp4" data-title="Video 20"><video src="videos/video20.mp4" controls></video><p>Video 20</p></div>
 </div>
 
-<!-- Modal -->
 <div class="modal" id="videoModal">
     <span class="close-btn" id="closeModal">&times;</span>
     <div class="modal-content">
@@ -134,29 +131,29 @@
     const modalVideo = document.getElementById('modalVideo');
     const closeModal = document.getElementById('closeModal');
 
-    // Buscador por título
+    let currentIndex = -1;
+
     searchInput.addEventListener('input', () => {
         const query = searchInput.value.toLowerCase();
         videoCards.forEach(card => {
             const title = card.dataset.title.toLowerCase();
-            if(title.includes(query)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            card.style.display = title.includes(query) ? 'block' : 'none';
         });
     });
 
-    // Abrir modal al hacer clic
-    videoCards.forEach(card => {
+    videoCards.forEach((card, index) => {
         card.addEventListener('click', () => {
-            modal.style.display = 'flex';
-            modalVideo.src = card.dataset.src;
-            modalVideo.play();
+            currentIndex = index;
+            openVideo(card.dataset.src);
         });
     });
 
-    // Cerrar modal
+    function openVideo(src) {
+        modal.style.display = 'flex';
+        modalVideo.src = src;
+        modalVideo.play();
+    }
+
     closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
         modalVideo.pause();
@@ -168,6 +165,21 @@
             modal.style.display = 'none';
             modalVideo.pause();
             modalVideo.src = '';
+        }
+    });
+
+    // 🔥 Navegación con flechas
+    document.addEventListener('keydown', e => {
+        if (modal.style.display !== 'flex') return;
+
+        if (e.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % videoCards.length;
+            openVideo(videoCards[currentIndex].dataset.src);
+        }
+
+        if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + videoCards.length) % videoCards.length;
+            openVideo(videoCards[currentIndex].dataset.src);
         }
     });
 </script>
