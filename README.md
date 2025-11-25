@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -44,20 +45,15 @@
         border-radius: 10px;
         cursor: pointer;
         transition: transform 0.3s;
-        text-align: center;
     }
     .video-card:hover {
         transform: scale(1.05);
     }
-    .video-card video {
+    video {
         width: 100%;
         height: 180px;
         border-radius: 5px;
         background-color: black;
-    }
-    .video-card p {
-        margin-top: 5px;
-        font-weight: bold;
     }
     /* Modal */
     .modal {
@@ -101,27 +97,26 @@
 
 <div class="videos-container" id="videosContainer">
     <!-- 20 vídeos locales -->
-    <!-- Ajusta las rutas según tus archivos -->
-    <div class="video-card" data-src="lerica.mp4" data-title="Video 1"><video src="lerica.mp4"></video><p>lerica</p></div>
-    <div class="video-card" data-src="videos/video2.mp4" data-title="Video 2"><video src="videos/video2.mp4"></video><p>Video 2</p></div>
-    <div class="video-card" data-src="videos/video3.mp4" data-title="Video 3"><video src="videos/video3.mp4"></video><p>Video 3</p></div>
-    <div class="video-card" data-src="videos/video4.mp4" data-title="Video 4"><video src="videos/video4.mp4"></video><p>Video 4</p></div>
-    <div class="video-card" data-src="videos/video5.mp4" data-title="Video 5"><video src="videos/video5.mp4"></video><p>Video 5</p></div>
-    <div class="video-card" data-src="videos/video6.mp4" data-title="Video 6"><video src="videos/video6.mp4"></video><p>Video 6</p></div>
-    <div class="video-card" data-src="videos/video7.mp4" data-title="Video 7"><video src="videos/video7.mp4"></video><p>Video 7</p></div>
-    <div class="video-card" data-src="videos/video8.mp4" data-title="Video 8"><video src="videos/video8.mp4"></video><p>Video 8</p></div>
-    <div class="video-card" data-src="videos/video9.mp4" data-title="Video 9"><video src="videos/video9.mp4"></video><p>Video 9</p></div>
-    <div class="video-card" data-src="videos/video10.mp4" data-title="Video 10"><video src="videos/video10.mp4"></video><p>Video 10</p></div>
-    <div class="video-card" data-src="videos/video11.mp4" data-title="Video 11"><video src="videos/video11.mp4"></video><p>Video 11</p></div>
-    <div class="video-card" data-src="videos/video12.mp4" data-title="Video 12"><video src="videos/video12.mp4"></video><p>Video 12</p></div>
-    <div class="video-card" data-src="videos/video13.mp4" data-title="Video 13"><video src="videos/video13.mp4"></video><p>Video 13</p></div>
-    <div class="video-card" data-src="videos/video14.mp4" data-title="Video 14"><video src="videos/video14.mp4"></video><p>Video 14</p></div>
-    <div class="video-card" data-src="videos/video15.mp4" data-title="Video 15"><video src="videos/video15.mp4"></video><p>Video 15</p></div>
-    <div class="video-card" data-src="videos/video16.mp4" data-title="Video 16"><video src="videos/video16.mp4"></video><p>Video 16</p></div>
-    <div class="video-card" data-src="videos/video17.mp4" data-title="Video 17"><video src="videos/video17.mp4"></video><p>Video 17</p></div>
-    <div class="video-card" data-src="videos/video18.mp4" data-title="Video 18"><video src="videos/video18.mp4"></video><p>Video 18</p></div>
-    <div class="video-card" data-src="videos/video19.mp4" data-title="Video 19"><video src="videos/video19.mp4"></video><p>Video 19</p></div>
-    <div class="video-card" data-src="videos/video20.mp4" data-title="Video 20"><video src="videos/video20.mp4"></video><p>Video 20</p></div>
+    <div class="video-card" data-src="lerica.mp4" data-title="Video 1"><video src="lerica.mp4" controls></video><p>lerica 1</p></div>
+    <div class="video-card" data-src="videos/video2.mp4" data-title="Video 2"><video src="videos/video2.mp4" controls></video><p>Video 2</p></div>
+    <div class="video-card" data-src="videos/video3.mp4" data-title="Video 3"><video src="videos/video3.mp4" controls></video><p>Video 3</p></div>
+    <div class="video-card" data-src="videos/video4.mp4" data-title="Video 4"><video src="videos/video4.mp4" controls></video><p>Video 4</p></div>
+    <div class="video-card" data-src="videos/video5.mp4" data-title="Video 5"><video src="videos/video5.mp4" controls></video><p>Video 5</p></div>
+    <div class="video-card" data-src="videos/video6.mp4" data-title="Video 6"><video src="videos/video6.mp4" controls></video><p>Video 6</p></div>
+    <div class="video-card" data-src="videos/video7.mp4" data-title="Video 7"><video src="videos/video7.mp4" controls></video><p>Video 7</p></div>
+    <div class="video-card" data-src="videos/video8.mp4" data-title="Video 8"><video src="videos/video8.mp4" controls></video><p>Video 8</p></div>
+    <div class="video-card" data-src="videos/video9.mp4" data-title="Video 9"><video src="videos/video9.mp4" controls></video><p>Video 9</p></div>
+    <div class="video-card" data-src="videos/video10.mp4" data-title="Video 10"><video src="videos/video10.mp4" controls></video><p>Video 10</p></div>
+    <div class="video-card" data-src="videos/video11.mp4" data-title="Video 11"><video src="videos/video11.mp4" controls></video><p>Video 11</p></div>
+    <div class="video-card" data-src="videos/video12.mp4" data-title="Video 12"><video src="videos/video12.mp4" controls></video><p>Video 12</p></div>
+    <div class="video-card" data-src="videos/video13.mp4" data-title="Video 13"><video src="videos/video13.mp4" controls></video><p>Video 13</p></div>
+    <div class="video-card" data-src="videos/video14.mp4" data-title="Video 14"><video src="videos/video14.mp4" controls></video><p>Video 14</p></div>
+    <div class="video-card" data-src="videos/video15.mp4" data-title="Video 15"><video src="videos/video15.mp4" controls></video><p>Video 15</p></div>
+    <div class="video-card" data-src="videos/video16.mp4" data-title="Video 16"><video src="videos/video16.mp4" controls></video><p>Video 16</p></div>
+    <div class="video-card" data-src="videos/video17.mp4" data-title="Video 17"><video src="videos/video17.mp4" controls></video><p>Video 17</p></div>
+    <div class="video-card" data-src="videos/video18.mp4" data-title="Video 18"><video src="videos/video18.mp4" controls></video><p>Video 18</p></div>
+    <div class="video-card" data-src="videos/video19.mp4" data-title="Video 19"><video src="videos/video19.mp4" controls></video><p>Video 19</p></div>
+    <div class="video-card" data-src="videos/video20.mp4" data-title="Video 20"><video src="videos/video20.mp4" controls></video><p>Video 20</p></div>
 </div>
 
 <!-- Modal -->
@@ -139,57 +134,40 @@
     const modalVideo = document.getElementById('modalVideo');
     const closeModal = document.getElementById('closeModal');
 
-    let currentIndex = 0; // Para seguimiento de vídeo actual
-
     // Buscador por título
     searchInput.addEventListener('input', () => {
         const query = searchInput.value.toLowerCase();
         videoCards.forEach(card => {
             const title = card.dataset.title.toLowerCase();
-            card.style.display = title.includes(query) ? 'block' : 'none';
+            if(title.includes(query)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
         });
     });
 
     // Abrir modal al hacer clic
-    videoCards.forEach((card, index) => {
+    videoCards.forEach(card => {
         card.addEventListener('click', () => {
-            currentIndex = index;
-            openModal(card.dataset.src);
+            modal.style.display = 'flex';
+            modalVideo.src = card.dataset.src;
+            modalVideo.play();
         });
     });
 
-    function openModal(src) {
-        modal.style.display = 'flex';
-        modalVideo.src = src;
-        modalVideo.load();
-        modalVideo.play().catch(err => console.log(err));
-    }
-
-    function closeVideoModal() {
+    // Cerrar modal
+    closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
         modalVideo.pause();
         modalVideo.src = '';
-    }
-
-    closeModal.addEventListener('click', closeVideoModal);
-    modal.addEventListener('click', e => {
-        if(e.target === modal) closeVideoModal();
     });
 
-    // Navegación con flechas
-    document.addEventListener('keydown', (e) => {
-        if(modal.style.display === 'flex') {
-            if(e.key === 'ArrowRight') { // siguiente
-                currentIndex = (currentIndex + 1) % videoCards.length;
-                openModal(videoCards[currentIndex].dataset.src);
-            }
-            if(e.key === 'ArrowLeft') { // anterior
-                currentIndex = (currentIndex - 1 + videoCards.length) % videoCards.length;
-                openModal(videoCards[currentIndex].dataset.src);
-            }
-            if(e.key === 'Escape') {
-                closeVideoModal();
-            }
+    modal.addEventListener('click', e => {
+        if(e.target === modal) {
+            modal.style.display = 'none';
+            modalVideo.pause();
+            modalVideo.src = '';
         }
     });
 </script>
